@@ -1,4 +1,4 @@
 pandas
 plotly
 streamlit
-streamlit_extras.dataframe_explorer
+streamlit_extras
