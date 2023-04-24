@@ -1,6 +1,20 @@
 import streamlit as st
 import base64
-st.image("https://arseed.web3infra.dev/nryZxpbQFXhlLvVdZi-GSjs2yQPoH-YaVaUVlkM9vr4")
+import streamlit.components.v1 as com
+from PIL import Image
+
+with open("designing.css") as source_des:
+    st.markdown(f"<style>{source_des.read()}</style>",unsafe_allow_html=True)
+
+image = Image.open('Group 37818.png')
+
+col1,col2 = st.columns([1,7])
+with col1:
+    #com.iframe('https://embed.lottiefiles.com/animation/138008')
+    st.image(image)
+with col2:
+    st.header('PermaswapDashboard')
+# st.image("https://arseed.web3infra.dev/nryZxpbQFXhlLvVdZi-GSjs2yQPoH-YaVaUVlkM9vr4")
 st.subheader('Summary')
 
 # file_ = open("/Users/evelyn/Desktop/Permaswapdata_app/gifgit (1).gif", "rb")
@@ -30,6 +44,13 @@ st.subheader('Summary')
 
 #col2.header('DASHBOARD') 
 
+st.markdown("""
+    <style>
+    a[href] {
+        text-decoration: none;
+        color: #61AA69;
+    }
+""", unsafe_allow_html=True)
 
 st.write(
     """
@@ -45,7 +66,7 @@ st.write(
 )
 st.markdown(
     '''
-       * Website: [Permaswap.network](https://permaswap.network/#/)
+       * Website: :[Permaswap.network](https://permaswap.network/#/)
        * Twitter: [@Permaswap](https://twitter.com/Permaswap)
        * WhitePaper: [Permaswap WhitePaper](https://mirror.xyz/permaswap.eth/ustZcDgavlm4xmYI26thEAj8W2cXlZpRkG5Jqz0iS14) 
        * Governance DAO: [PSCP](https://permadao.notion.site/Permaswap-69ba28d2d17643ae9711947329138c58)

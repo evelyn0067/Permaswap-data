@@ -1,0 +1,56 @@
+div.css-6qob1r.e1fqkh3o3
+{
+    background-color: #020C0A;
+    color: #FFFFFF;
+}
+div.stAlert
+{
+    background-color: #2f7b38;
+    border-radius: 8px;
+    color:#ffffff
+}
+div.css-1w6rlcb.e12sa3f30
+{
+    color: #FFFFFF;
+}
+span.css-1offfwp.a
+{
+    color: #FFFFCF;
+}
+#sidebartext
+span.css-pkbazv.e1fqkh3o5
+{
+    color: #FFFFFF;
+}
+span.css-pkbazv.e1fqkh3o5
+{
+    color: #FFFFFF;
+}
+span.css-17lntkn.e1fqkh3o5
+{
+    color: #FFFFFF;
+}
+
+div.css-6ndxjk.e1tzin5v0{
+    background-color: rgba(28, 131, 225, 0.1);
+    border: 1px solid rgba(28, 131, 225, 0.1);
+    padding: 5% 5% 5% 10%;
+    border-radius: 5px;
+    color: rgb(30, 103, 119);
+    overflow-wrap: break-word;
+}
+/* breakline for metric text		 */
+div.css-1ht1j8u{
+    overflow-wrap: break-word;
+    white-space: break-spaces;
+}
+div[data-testid="metric-container"] {
+    background-color: rgba(13, 116, 37, 0.1);
+    border: 1px solid rgba(29, 162, 74, 0.1);
+    padding: 5% 5% 5% 10%;
+    border-radius: 5px;
+    color: rgb(14, 16, 13);
+    overflow-wrap: break-word;
+ }
+
+
