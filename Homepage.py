@@ -3,6 +3,26 @@ import base64
 import streamlit.components.v1 as com
 from PIL import Image
 
+st.markdown("""
+<style>
+.css-h5rgaw.egzxvld1
+{
+    visibility: hidden;
+}
+.ag-row-odd ag-row-no-focus ag-row ag-row-level-0 ag-row-position-absolute
+{
+    visibility: hidden;
+}
+.ag-cell-wrapper
+{
+    visibility: hidden;
+}
+.gridToolBar
+{
+    visibility: hidden;
+}
+""",unsafe_allow_html=True)
+
 with open("designing.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>",unsafe_allow_html=True)
 
