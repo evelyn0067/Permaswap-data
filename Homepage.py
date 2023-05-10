@@ -89,7 +89,7 @@ st.markdown(
        * Website: :[Permaswap.network](https://permaswap.network/#/)
        * Twitter: [@Permaswap](https://twitter.com/Permaswap)
        * WhitePaper: [Permaswap WhitePaper](https://mirror.xyz/permaswap.eth/ustZcDgavlm4xmYI26thEAj8W2cXlZpRkG5Jqz0iS14) 
-       * Governance DAO: [PSCP](https://permadao.notion.site/Permaswap-69ba28d2d17643ae9711947329138c58)
+       * Governance DAO: [PSPC](https://permadao.notion.site/Permaswap-69ba28d2d17643ae9711947329138c58)
     '''
 )
 st.subheader('Usage')
