@@ -39,6 +39,7 @@ decimals = {
     'eth':18,
     'ardrive':18,
     'acnh':8,
+    'ans': 18
 }
 pools = {
     'usdc-usdt': '0xdb7b3480f2d1f7bbe91ee3610664756b91bbe0744bc319db2f0b89efdf552064',
