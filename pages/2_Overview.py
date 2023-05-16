@@ -46,7 +46,8 @@ pools = {
     'ar-eth': '0x5f0ac5160cd3c105f9db2fb3e981907588d810040eb30d77364affd6f4435933',
     'eth-usdc': '0x7eb07d77601f28549ff623ad42a24b4ac3f0e73af0df3d76446fb299ec375dd5',
     'ar-ardrive': '0xbb546a762e7d5f24549cfd97dfa394404790293277658e42732ab3b2c4345fa3',
-    'usdc-acnh': '0x7200199c193c97012893fd103c56307e44434322439ece7711f28a8c3512c082'
+    'usdc-acnh': '0x7200199c193c97012893fd103c56307e44434322439ece7711f28a8c3512c082',
+    'ar-ans': '0x6e80137a5bbb6ae6b683fcd8a20978d6b4632dddc78aa61945adbcc5a197ca0f'
 
 }
 
@@ -59,6 +60,7 @@ fee_ratios = {
     'eth-usdt': 0.003,
     'ar-ardrive': 0.003,
     'usdc-acnh':0.0005,
+    'ar-ans': 0.003
 }
 
 @st.cache_data(ttl=300)
