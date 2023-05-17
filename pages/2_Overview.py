@@ -126,7 +126,7 @@ col3.metric(":green[Current Total TVL]", '{:,.0f} $'.format(total_tvl))
 st.empty()
 st.subheader('Support Token')
 
-c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12 = st.columns([1,1.1,1,1.1,1,1.3,1,1.1,1,1.1,1,1.1])
+c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14 = st.columns([0.96,0.9,0.96,0.93,0.96,1.3,0.96,0.93,0.96,0.93,0.96,0.9,0.96,0.9])
 
 c1.image(Image.open('ar.png'))
 c2.text('AR')
@@ -145,6 +145,9 @@ c10.text('USDT')
 
 c11.image(Image.open('eth.png'))
 c12.text('ETH')
+
+c13.image(Image.open('ans.png'))
+c14.text('ANS')
 
 pd_tvl = pd.DataFrame(tvl)
 df_pool = pd_tvl.transpose()
