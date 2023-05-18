@@ -25,7 +25,7 @@ st.markdown("""
 """,unsafe_allow_html=True)
 with open("designing.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>",unsafe_allow_html=True)
-st.title("Orders data")
+st.title("Order data")
 data = utils.get_order_data()
 df = data.reindex(columns=['Address','In Token','Out Token','In Token Amount','Out Token Amount','Price','everHash'])
 st.info('**You can query all the transactions in Permaswap within 30 days.**')
