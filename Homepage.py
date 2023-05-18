@@ -36,7 +36,6 @@ with col2:
     st.header('PermaswapDashboard')
 # st.image("https://arseed.web3infra.dev/nryZxpbQFXhlLvVdZi-GSjs2yQPoH-YaVaUVlkM9vr4")
 st.subheader('Summary')
-
 # file_ = open("/Users/evelyn/Desktop/Permaswapdata_app/gifgit (1).gif", "rb")
 # contents = file_.read()
 #data_url = base64.b64encode(contents).decode("utf-8")
@@ -71,7 +70,6 @@ st.markdown("""
         color: #61AA69;
     }
 """, unsafe_allow_html=True)
-
 st.write(
     """
     Welcome to the Permaswap dashboard which is geared to monitoring and analyzing various metrics related to Permaswap. 
