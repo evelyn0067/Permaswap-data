@@ -74,14 +74,13 @@ st.markdown("""
 
 st.write(
     """
-    This is the dashboard of Permaswap which is amied to monitor and analyze various metrics 
-    related to Permaswap. It allows users to track the performance of different tokens and trading 
-    pairs, identify trends and patterns, and make informed decisions.
-
-    Permaswap is a cross-chain DEX network with 0 gas fees, provided by @everVisionHQ. 
-    All swaps are done INSTANTLY with the power of the everPay protocol. Our goal? 
-    Allow you to easily swap different assets from different chains in one place for a quick and efficient experience.
+    Welcome to the Permaswap dashboard which is geared to monitoring and analyzing various metrics related to Permaswap. 
+    It allows users to track difference token performances, trading pairs, identifying trends as well as patterns 
+    and of course to make informed decisions.
     
+    Just a reminder that Permaswap is a cross-chain DEX network with 0 gas fees and having all transactions delivered INSTANTLY. 
+    All swaps that are done instantly are powered by everPay! Our goal? Allow you to easily swap different assets from different chains 
+    in one place for a quick and easy experience.
     """
 )
 st.markdown(
