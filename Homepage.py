@@ -96,9 +96,9 @@ st.subheader('Usage')
 st.markdown(
     '''
        * Overview: You can get the overall data of Permaswap
-       * Pool Analysis: This part cantain specific data of the pool 
-       * Users Analysis: This about the users of Permaswap 
-       * Order Data: You can query recent order
+       * Pool Analysis: This part contain specific data of the pool 
+       * Users Analysis: This is about the users of Permaswap 
+       * Order Data: You can query all the transactions in Permaswap within 30 days
     '''
 )
 st.subheader('Future Works')
