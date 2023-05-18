@@ -26,7 +26,7 @@ st.markdown("""
 """,unsafe_allow_html=True)
 with open("designing.css") as source_des:
     st.markdown(f"<style>{source_des.read()}</style>",unsafe_allow_html=True)
-st.title("Users analysis")
+st.title("User analysis")
 data = utils.get_order_data()
 df = data.resample('D').nunique()
 df = df.astype(float)
