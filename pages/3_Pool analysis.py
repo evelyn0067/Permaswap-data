@@ -165,7 +165,7 @@ print('total_tvl:', total_tvl)
 print('tvl:', tvl)
 
 col1, col2 = st.columns(2)
-col1.header('PooL')
+col1.header('Pool')
 pool = col2.selectbox(
     '',
     pools.keys())
