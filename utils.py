@@ -161,6 +161,7 @@ def get_order_data():
     frame = frame.replace('ethereum-usdt-0xdac17f958d2ee523a2206206994597c13d831ec7', 'USDT')
     frame = frame.replace('everpay-acnh-0x72247989079da354c9f0a6886b965bcc86550f8a', 'ACNH')
     frame = frame.replace('ethereum-ans-0x937efa4a5ff9d65785691b70a1136aaf8ada7e62', 'ANS')
+    frame = frame.replace('arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw', 'U')
     frame['Price'] = frame['Price'].astype(float)
     return frame
 
