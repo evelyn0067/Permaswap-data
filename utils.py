@@ -16,8 +16,10 @@ decimals = {
     'ardrive':18,
     'acnh':8,
     'ans': 18,
-    'u':6
+    'u':6,
+    'stamp': 12
 }
+
 pools = {
     'usdc-usdt': '0xdb7b3480f2d1f7bbe91ee3610664756b91bbe0744bc319db2f0b89efdf552064',
     'ar-usdc': '0x0750e26dbffb85e66891b71b9e1049c4be6d94dab938bbb06573ca6178615981',
@@ -26,7 +28,8 @@ pools = {
     'ar-ardrive': '0xbb546a762e7d5f24549cfd97dfa394404790293277658e42732ab3b2c4345fa3',
     'usdc-acnh': '0x7200199c193c97012893fd103c56307e44434322439ece7711f28a8c3512c082',
     'ar-ans': '0x6e80137a5bbb6ae6b683fcd8a20978d6b4632dddc78aa61945adbcc5a197ca0f',
-    'ar-u': '0xdc13faadbd1efdaeb764f5515b20d88c5b9fa0c507c0717c7013b1725e398717'
+    'ar-u': '0xdc13faadbd1efdaeb764f5515b20d88c5b9fa0c507c0717c7013b1725e398717',
+    'ar-stamp': '0x94170544e7e25b6fc216eb044c1c283c89781bfb92bfeda3054488497bd654b6'
 }
 
 fee_ratios = {
@@ -39,7 +42,8 @@ fee_ratios = {
     'ar-ardrive': 0.003,
     'usdc-acnh':0.0005,
     'ar-ans': 0.003,
-    'ar-u': 0.003
+    'ar-u': 0.003,
+    'ar-stamp': 0.003
 }
 
 symbol_to_tag = {
@@ -50,7 +54,8 @@ symbol_to_tag = {
     'ardrive': 'arweave-ardrive--8A6RexFkpfWwuyVO98wzSFZh0d6VJuI-buTJvlwOJQ',
     'acnh': 'everpay-acnh-0x72247989079da354c9f0a6886b965bcc86550f8a',
     'ans': 'ethereum-ans-0x937efa4a5ff9d65785691b70a1136aaf8ada7e62',
-    'u': 'arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw'
+    'u': 'arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw',
+    'stamp': 'arweave-stamp-TlqASNDLA1Uh8yFiH-BzR_1FDag4s735F3PoUFEv2Mo'
 }
 
 tag_to_symbol = {value: key for key, value in symbol_to_tag.items()}
@@ -121,6 +126,7 @@ def get_prices():
         'acnh':0.147,
         'ans':2.0,
         'u':0.8,
+        'stamp': 0.06
     }
     prices['ar'] = get_price_from_redstone('ar', 'usdc')
     prices['eth'] = get_price_from_redstone('eth', 'usdc')
