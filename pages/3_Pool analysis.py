@@ -38,7 +38,7 @@ col1, col2, col3 = st.columns(3)
 col1.header('Price K-line')
 token = col2.selectbox(
     '',
-    ['AR','ETH','ARDRIVE','ACNH','ANS','U'])
+    ['AR','ETH','ARDRIVE','ACNH','ANS','U','STAMP'])
 period = col3.selectbox('', ['D', '8H', '4H', 'H'])
 token = token.lower()
 today = datetime.date.today()
