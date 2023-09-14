@@ -376,22 +376,20 @@ def get_kline_new(orders, token, period):
     print(df.head())
     df.set_index('time', inplace=True)
     df.index = pd.to_datetime(df.index, unit='ms')
-    df1 = df[(df['token_in']==token)]
-    df1['price'] = df1['volume']/df1['amount_in']
-    df2 = df[(df['token_out']==token)]
-    df2['price'] = df2['volume']/df2['amount_out']
+    df1 = df[(df['token_in'] == token)].copy()
+    df1.loc[:, 'price'] = df1['volume'] / df1['amount_in']
+    df2 = df[(df['token_out'] == token)].copy()
+    df2.loc[:, 'price'] = df2['volume'] / df2['amount_out']
+
     df3 = pd.concat([df1,df2])
     df4 = df3.resample(rule=period).agg(
         {'price': ['first', 'max', 'min', 'last'],     
         'volume': 'sum'
     })
-    #df4.reset_index(inplace=True)
-  
     prev = df4['price']['last'].shift(1)
-    df4['price']['last'].fillna(prev, inplace=True)
-    df4['price']['min'].fillna(prev, inplace=True)
-    df4['price']['max'].fillna(prev, inplace=True)
-    df4['price']['first'].fillna(prev, inplace=True)
-    df4.fillna(method='ffill', inplace=True)
-    
+    df4['price', 'last'] = df4['price']['last'].fillna(prev)
+    df4['price', 'min'] = df4['price']['min'].fillna(prev)
+    df4['price', 'max'] = df4['price']['max'].fillna(prev)
+    df4['price', 'first'] = df4['price']['first'].fillna(prev)
+    df4 = df4.fillna(method='ffill')
     return df4
