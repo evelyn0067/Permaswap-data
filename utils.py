@@ -130,7 +130,8 @@ def get_prices():
         'acnh':0.147,
         'ans':2.0,
         'u':0.8,
-        'stamp': 0.06
+        'stamp': 0.06,
+        'map': 0.008
     }
     prices['ar'] = get_price_from_redstone('ar', 'usdc')
     prices['eth'] = get_price_from_redstone('eth', 'usdc')
