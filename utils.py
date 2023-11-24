@@ -174,6 +174,7 @@ def get_order_data():
     frame = frame.replace('ethereum-ans-0x937efa4a5ff9d65785691b70a1136aaf8ada7e62', 'ANS')
     frame = frame.replace('arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw', 'U')
     frame = frame.replace('arweave-stamp-TlqASNDLA1Uh8yFiH-BzR_1FDag4s735F3PoUFEv2Mo', 'STAMP')
+    frame = frame.replace('ethereum-map-0x9e976f211daea0d652912ab99b0dc21a7fd728e4', 'MAP')
     frame['Price'] = frame['Price'].astype(float)
     return frame
 
