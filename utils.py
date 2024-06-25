@@ -182,7 +182,7 @@ def get_prices():
 def get_order_data():
     day_end = datetime.date.today()
     date_end = day_end.strftime('%Y-%m-%d')
-    day_start = day_end - datetime.timedelta(days=30)
+    day_start = day_end - datetime.timedelta(days=10)
     date_start= day_start.strftime('%Y-%m-%d')
     combined_df = pd.DataFrame()
     url = 'https://router.permaswap.network/orders/?start='+date_start+'&end='+date_end+'&count=200&page='
