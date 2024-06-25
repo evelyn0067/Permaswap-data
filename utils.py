@@ -8,6 +8,21 @@ import streamlit as st
 stats_host = 'https://stats.permaswap.network'
 router_host = 'https://router.permaswap.network'
 
+min_amount = {
+    'ar': "10000000000",
+    'eth': "100000000000000",
+    'acnh': "10000000",
+    'ardrive': "100000000000000000",
+    'ans': "100000000000000000",
+    'u': "100000",
+    'stamp': "100000000000",
+    # 'map': "100000000000000000",
+    'trunk': '1000',
+    'aocred': '1000',
+    '0rbt': '1000000000000',
+    'exp(ario)': '100000'
+}
+
 decimals = {
     'ar': 12,
     'usdc': 6,
