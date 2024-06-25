@@ -7,6 +7,8 @@ import streamlit as st
 
 stats_host = 'https://stats.permaswap.network'
 router_host = 'https://router.permaswap.network'
+router = 'wss://router.permaswap.network'
+pay = 'https://api.everpay.io'
 
 min_amount = {
     'ar': "10000000000",
@@ -77,6 +79,20 @@ tag_to_symbol = {value: key for key, value in symbol_to_tag.items()}
 
 
 HALF = Decimal('0.5')
+
+@st.cache_data(ttl=300) 
+def get_orders(end, start='', duration=30):
+    orders = []
+    if start == '':
+        start = end - datetime.timedelta(days=duration)
+    for page in range(1, 50000):
+        url = '%s/orders?start=%s&end=%s&count=200&page=%i'%(router_host, start.strftime('%Y-%m-%d'), end.strftime('%Y-%m-%d'), page)
+        print(url)
+        data = requests.get(url).json()
+        orders.extend(data['orders'])
+        if len(data['orders']) < 200:
+            break
+    return orders
 
 def liquidity_to_amount(liquidity, lower_price, upper_price, current_price):
     liquidity = Decimal(str(liquidity))
@@ -214,6 +230,35 @@ def get_orders(end, start='', duration=30):
         if len(data['orders']) < 200:
             break
     return orders
+
+def get_order(pay_host, ps_router_host, address, token_in, token_out, amount_in):
+    ps_router_url= urllib.parse.urljoin(ps_router_host, '/wsuser')
+    token_in_tag = tags[token_in.lower()]
+    token_out_tag = tags[token_out.lower()]
+    token_in_decimals = decimals[token_in]
+    token_out_decimals = decimals[token_out]
+
+    query = {
+        'event': 'query',
+        'address': address,
+        'tokenIn': token_in_tag,
+        'tokenOut': token_out_tag,
+        'amountIn': str(amount_in)
+    }
+    ws = create_connection(ps_router_url)
+    ws.send(json.dumps(query))
+    data = json.loads(ws.recv())
+    if data['event'] == 'order':
+        order = data
+        order['tokenIn'] = token_in_tag
+        order['tokenOut'] = token_out_tag
+        order['amount_in'] = str(amount_in)
+        order['amount_out'] = get_amount_out(address, order, token_out_tag)
+        order['amount_in2'] = str(Decimal(int(order['amount_in']))/Decimal(10**token_in_decimals))
+        order['amount_out2'] = str(Decimal(int(order['amount_out']))/Decimal(10**token_out_decimals))
+        order['rate'] = float(order['amount_out2'])/float(order['amount_in2'])
+        return order
+    return data
 
 @st.cache_data(ttl=300)
 def get_today_orders():
