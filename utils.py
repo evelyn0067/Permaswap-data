@@ -33,8 +33,14 @@ decimals = {
     'ardrive':18,
     'acnh':8,
     'ans': 18,
-    'u':6,
-    'stamp': 12
+    'u': 6,
+    'stamp': 12,
+    # 'map': 18,
+    'aocred':3,
+    'trunk':3,
+    '0rbt':18,
+    'halo':18,
+    'exp(ario)':6
 }
 
 pools = {
@@ -46,7 +52,11 @@ pools = {
     'usdc-acnh': '0x7200199c193c97012893fd103c56307e44434322439ece7711f28a8c3512c082',
     'ar-ans': '0x6e80137a5bbb6ae6b683fcd8a20978d6b4632dddc78aa61945adbcc5a197ca0f',
     'ar-u': '0xdc13faadbd1efdaeb764f5515b20d88c5b9fa0c507c0717c7013b1725e398717',
-    'ar-stamp': '0x94170544e7e25b6fc216eb044c1c283c89781bfb92bfeda3054488497bd654b6'
+    'ar-stamp': '0x94170544e7e25b6fc216eb044c1c283c89781bfb92bfeda3054488497bd654b6',
+    'aocred-ar':'0x17cf053e2c1e40ea7dc2b073d4771b9a8740605c0aacbb7274f7e4a5ec6b9712',
+    'trunk-ar':'0x6f5c2032a72144c4bab8db3fa6495e89b9440c47fe248e58845ec1c47926eef2',
+    '0rbt-aocred': '0x733fad6543917e805df8f35bee9307bbdc15e180d9864ca665adcd8f90484453',
+    'exp(ario)-ar': '0x2a828200dbb69b0d83bd23ee4d98d34e8a2468b33fdf951eb55ec5623c46b1c7',
 }
 
 fee_ratios = {
@@ -54,13 +64,15 @@ fee_ratios = {
     'ar-usdc': 0.003,
     'ar-eth': 0.003,
     'eth-usdc': 0.003,
-    'ar-usdt': 0.003,
-    'eth-usdt': 0.003,
     'ar-ardrive': 0.003,
     'usdc-acnh':0.0005,
     'ar-ans': 0.003,
     'ar-u': 0.003,
-    'ar-stamp': 0.003
+    'ar-stamp': 0.003,
+    'aocred-ar':0.01,
+    'trunk-ar':0.03,
+    '0rbt-aocred': 0.03,
+    'exp(ario)-ar': 0.1,
 }
 
 symbol_to_tag = {
@@ -72,7 +84,12 @@ symbol_to_tag = {
     'acnh': 'everpay-acnh-0x72247989079da354c9f0a6886b965bcc86550f8a',
     'ans': 'ethereum-ans-0x937efa4a5ff9d65785691b70a1136aaf8ada7e62',
     'u': 'arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw',
-    'stamp': 'arweave-stamp-TlqASNDLA1Uh8yFiH-BzR_1FDag4s735F3PoUFEv2Mo'
+    'stamp': 'arweave-stamp-TlqASNDLA1Uh8yFiH-BzR_1FDag4s735F3PoUFEv2Mo',
+    # 'map': 'ethereum-map-0x9e976f211daea0d652912ab99b0dc21a7fd728e4',
+    'aocred': 'aostest-aocred-Sa0iBLPNyJQrwpTTG-tWLQU-1QeUAJA73DdxGGiKoJc',
+    'trunk': 'aostest-trunk-OT9qTE2467gcozb2g8R6D6N3nQS94ENcaAIJfUzHCww',
+    '0rbt': 'aostest-0rbt-BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc',
+    'halo':'psntest-halo-0x0000000000000000000000000000000000000000'
 }
 
 tag_to_symbol = {value: key for key, value in symbol_to_tag.items()}
