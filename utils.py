@@ -113,7 +113,6 @@ def get_price_from_redstone(token, currency, timestamp=''):
         payload['toTimestamp'] = str(timestamp)
 
     url = '%s/?%s'%(base_url, urlencode(payload, quote_via=quote_plus))
-    #print(url)
     result = requests.get(url).json()
     price = result[token.upper()]['value']/result[currency.upper()]['value']
     return price
