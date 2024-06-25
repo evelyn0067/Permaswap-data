@@ -118,7 +118,7 @@ def get_price_from_redstone(token, currency, timestamp=''):
     return price
 
 @st.cache_data(ttl=300)
-def get_prices():
+def get_prices2():
     prices = {
         'usdc': 1,
         'usdt':1,
@@ -131,8 +131,21 @@ def get_prices():
     prices['eth'] = get_price_from_redstone('eth', 'usdc')
     prices['ardrive'] = get_price_from_redstone('ardrive','usdc')
     return prices
-prices = get_prices()
-print('prices', prices)
+
+def get_price_from_ps(token, amount_in, decimals=4):
+    order = get_order(pay, router, '0x61EbF673c200646236B2c53465bcA0699455d5FA', token, 'usdc', amount_in)
+    #rate = int(float(order['rate']) * 10**(decimals))/10**(decimals)
+    return order.get('rate', '') 
+
+def get_prices():
+    prices = {
+        'usdc': 1,
+        'usdt':1,
+    }
+    for token in ['ar', 'eth', 'acnh', 'ardrive', 'ans', 'u', 'stamp', 'aocred', 'trunk', '0rbt', 'exp(ario)']:
+        prices[token] = utils.get_price_from_ps(token, min_amount[token])
+    
+    return prices
 
 @st.cache_data(ttl=300)
 def get_order_data():
