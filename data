@@ -1,7 +1,7 @@
 import requests, datetime
 import pandas as pd
 import streamlit as st
-import utils
+import utils2 as utils
 
 stats_host = 'https://stats.permaswap.network'
 router_host = 'https://router.permaswap.network'
