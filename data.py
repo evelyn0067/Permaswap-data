@@ -177,7 +177,7 @@ def get_lps():
     return lps
 
 @st.cache_data
-def get_orders(end, start='', duration=30):
+def get_orders(end, start='', duration=15):
     orders = []
     if start == '':
         start = end - datetime.timedelta(days=duration)
