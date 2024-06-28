@@ -91,25 +91,25 @@ def get_order(pay_host, ps_router_host, address, token_in, token_out, amount_in)
     '0rbt':18,
     'halo':18,
     'exp(ario)':6
-}
+    }
 
-tags = {
-    'ar': "arweave,ethereum-ar-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,0x4fadc7a98f2dc96510e42dd1a74141eeae0c1543",
-    'usdc': "ethereum-usdc-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-    'usdt': "ethereum-usdt-0xdac17f958d2ee523a2206206994597c13d831ec7",
-    'eth': "ethereum-eth-0x0000000000000000000000000000000000000000",
-    'ardrive':"arweave-ardrive--8A6RexFkpfWwuyVO98wzSFZh0d6VJuI-buTJvlwOJQ",
-    'acnh': "everpay-acnh-0x72247989079da354c9f0a6886b965bcc86550f8a",
-    'ans': "ethereum-ans-0x937efa4a5ff9d65785691b70a1136aaf8ada7e62",
-    'u': 'arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw',
-    'stamp': 'arweave-stamp-TlqASNDLA1Uh8yFiH-BzR_1FDag4s735F3PoUFEv2Mo',
-    # 'map': 'ethereum-map-0x9e976f211daea0d652912ab99b0dc21a7fd728e4',
-    'aocred': 'aostest-aocred-Sa0iBLPNyJQrwpTTG-tWLQU-1QeUAJA73DdxGGiKoJc',
-    'trunk': 'aostest-trunk-OT9qTE2467gcozb2g8R6D6N3nQS94ENcaAIJfUzHCww',
-    '0rbt': 'aostest-0rbt-BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc',
-    'halo':'psntest-halo-0x0000000000000000000000000000000000000000',
-    'exp(ario)':'aostest-exp(ario)-aYrCboXVSl1AXL9gPFe3tfRxRf0ZmkOXH65mKT0HHZw'
-}
+    tags = {
+        'ar': "arweave,ethereum-ar-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,0x4fadc7a98f2dc96510e42dd1a74141eeae0c1543",
+        'usdc': "ethereum-usdc-0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        'usdt': "ethereum-usdt-0xdac17f958d2ee523a2206206994597c13d831ec7",
+        'eth': "ethereum-eth-0x0000000000000000000000000000000000000000",
+        'ardrive':"arweave-ardrive--8A6RexFkpfWwuyVO98wzSFZh0d6VJuI-buTJvlwOJQ",
+        'acnh': "everpay-acnh-0x72247989079da354c9f0a6886b965bcc86550f8a",
+        'ans': "ethereum-ans-0x937efa4a5ff9d65785691b70a1136aaf8ada7e62",
+        'u': 'arweave-u-KTzTXT_ANmF84fWEKHzWURD1LWd9QaFR9yfYUwH2Lxw',
+        'stamp': 'arweave-stamp-TlqASNDLA1Uh8yFiH-BzR_1FDag4s735F3PoUFEv2Mo',
+        # 'map': 'ethereum-map-0x9e976f211daea0d652912ab99b0dc21a7fd728e4',
+        'aocred': 'aostest-aocred-Sa0iBLPNyJQrwpTTG-tWLQU-1QeUAJA73DdxGGiKoJc',
+        'trunk': 'aostest-trunk-OT9qTE2467gcozb2g8R6D6N3nQS94ENcaAIJfUzHCww',
+        '0rbt': 'aostest-0rbt-BUhZLMwQ6yZHguLtJYA5lLUa9LQzLXMXRfaq9FVcPJc',
+        'halo':'psntest-halo-0x0000000000000000000000000000000000000000',
+        'exp(ario)':'aostest-exp(ario)-aYrCboXVSl1AXL9gPFe3tfRxRf0ZmkOXH65mKT0HHZw'
+    }
 
     ps_router_url= urllib.parse.urljoin(ps_router_host, '/wsuser')
     token_in_tag = tags[token_in.lower()]
