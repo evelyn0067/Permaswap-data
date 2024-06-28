@@ -1,7 +1,7 @@
 import requests, datetime
 import pandas as pd
 import streamlit as st
-import utils2 as utils
+import utils2
 
 stats_host = 'https://stats.permaswap.network'
 router_host = 'https://router.permaswap.network'
@@ -122,13 +122,13 @@ def get_prices():
         'u': 0.8,
         'stamp': 0.06
     }
-    prices['ar'] = utils.get_price_from_redstone('ar', 'usdc')
-    prices['ardrive'] = utils.get_price_from_redstone('ardrive', 'usdc')
-    prices['acnh'] = utils.get_price_from_redstone('ardrive', 'usdc')
-    prices['eth'] = utils.get_price_from_redstone('eth', 'usdc')
-    prices['ans'] = utils.get_price_from_redstone('ans', 'usdc')
-    prices['stamp'] = utils.get_price_from_redstone('stamp', 'usdc')
-    # prices['map'] = utils.get_price_from_redstone('map', 'usdc')
+    prices['ar'] = utils2.get_price_from_redstone('ar', 'usdc')
+    prices['ardrive'] = utils2.get_price_from_redstone('ardrive', 'usdc')
+    prices['acnh'] = utils2.get_price_from_redstone('ardrive', 'usdc')
+    prices['eth'] = utils2.get_price_from_redstone('eth', 'usdc')
+    prices['ans'] = utils2.get_price_from_redstone('ans', 'usdc')
+    prices['stamp'] = utils2.get_price_from_redstone('stamp', 'usdc')
+    # prices['map'] = utils2.get_price_from_redstone('map', 'usdc')
 
     return prices
 
@@ -139,7 +139,7 @@ def get_prices2():
         'usdt':1,
     }
     for token in ['ar', 'eth', 'acnh', 'ardrive', 'ans', 'u', 'stamp', 'aocred', 'trunk', '0rbt', 'exp(ario)']:
-        prices[token] = utils.get_price_from_ps(token, min_amount[token])
+        prices[token] = utils2.get_price_from_ps(token, min_amount[token])
     
     return prices
 
